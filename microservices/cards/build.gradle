@@ -14,6 +14,20 @@ java {
 	}
 }
 
+
+bootBuildImage {
+	imageName = "myorg/${project.name}:${project.version}"
+	builder = "paketobuildpacks/builder:base" // or tiny/full based on needs
+	environment = [
+			"BP_JVM_VERSION": "18", // specify JDK version for the buildpack
+		//	"BP_OCI_SOURCE": "https://github.com/myorg/myrepo"
+	]
+
+	// Optional: configure registry if pushing to Docker Hub or ECR
+	publish = false // true if you want to push directly to registry
+}
+
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
