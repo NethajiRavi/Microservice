@@ -1,0 +1,8 @@
+build a docker image
+
+add a docker file
+build -- docker build . -t nethaji043/accountimage:s1
+run --   docker run -p 8084:8084 nethaji043/accountimage:s1
+run in detached mode -- docker run -d -p 8084:8084 nethaji043/accountimage:s1
+
+
