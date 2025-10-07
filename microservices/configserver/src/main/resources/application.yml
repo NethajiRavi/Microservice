@@ -6,6 +6,7 @@ spring:
   cloud:
     config:
       native:
-        search-locations: "classpath:/config"
+#        search-locations: "classpath:/config"
+         search-locations: "file:///F:/documents/files"
 server:
   port: 8071
